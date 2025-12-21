@@ -50,6 +50,7 @@
   # networking.wireless.enable = true;  # Enable wireless support via wpa_supplicant.
   networking.firewall.enable = false; # Mematikan firewall agar vpn tidak diblokir
   boot.kernelModules = [ "tun" ]; # Enable Tun for vpn services
+  networking.networkmanager.wifi.powersave = false; # disable wifi power save
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
