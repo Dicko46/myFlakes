@@ -284,6 +284,13 @@
       email = "dickorahmansyah@gmail.com";
     };
   };
+  # Fix permission issues
+  home.activation.ensureGitConfig = ''
+    if [ ! -d "$HOME/.config/git" ]; then
+      mkdir -p "$HOME/.config/git"
+    fi
+    chmod 755 "$HOME/.config/git"
+  '';
 
   # XDG directories
   xdg.enable = true;
