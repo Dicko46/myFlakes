@@ -91,6 +91,7 @@
 
     shellAliases = {
       update = "sudo nixos-rebuild switch --flake /home/dicko/myFlakes#nixos";
+      flake-update = "sudo nix flake update /home/dicko/myFlakes";
       garbage = "sudo nix-collect-garbage";
       pffmpeg = "progress -M -c ffmpeg";
       mihomo-status = "sudo systemctl status mihomo.service";

@@ -175,6 +175,7 @@
     exfatprogs
     kdePackages.partitionmanager
     unrar
+    nix-update
   ];
 
   services.mihomo = {
@@ -193,6 +194,8 @@
     };
   };
   programs.gamemode.enable = true;
+  documentation.man.enable = true; # Enable man pages
+  documentation.man.generateCaches = true; # Menghasilkan cache manual page
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
