@@ -182,12 +182,9 @@
     unzip
     steam-run
     desktop-file-utils
-    #nix-update
 
     # NUR Packages
 
-    # nur.repos.lonerOrz.abdm
-    #  nur.repos.mic92.hello-nur
   ];
 
   services.mihomo = {

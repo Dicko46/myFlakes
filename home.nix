@@ -45,9 +45,7 @@
     proton-pass
 
     # Internet
-    motrix
     brave
-    media-downloader
     tdl
     ayugram-desktop
 
