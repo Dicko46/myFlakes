@@ -25,11 +25,16 @@
     # Windows Apps + Gaming
     wine
     winetricks
+    cabextract
+    zenity
+    p7zip
     mangohud
     lutris
     protonup-qt
     heroic
     gamemode
+    freetype
+    winePackages.fonts
 
     # Multimedia
     obsidian

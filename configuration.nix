@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -155,6 +155,10 @@
   nixpkgs.config.allowUnfree = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+
+  # Enable nix-ld untuk run binary FHS
+  programs.nix-ld.enable = true;
+
   environment.systemPackages = with pkgs; [
     micro
     yt-dlp
@@ -175,7 +179,15 @@
     exfatprogs
     kdePackages.partitionmanager
     unrar
-    nix-update
+    unzip
+    steam-run
+    desktop-file-utils
+    #nix-update
+
+    # NUR Packages
+
+    # nur.repos.lonerOrz.abdm
+    #  nur.repos.mic92.hello-nur
   ];
 
   services.mihomo = {
