@@ -46,6 +46,7 @@
 
     # Internet
     brave
+    firefox-esr
     tdl
     ayugram-desktop
 
@@ -126,6 +127,9 @@
       hwdec = "auto-safe";
       screenshot-format = "png";
       screenshot-directory = "~/Pictures/Screenshots";
+      sub-auto = "fuzzy";
+      sl = "id";
+      sub-codepage = "sjis";
     };
   };
 
