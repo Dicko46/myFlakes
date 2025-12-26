@@ -107,6 +107,7 @@
       mihomo-log = "journalctl -u mihomo.service -f";
       mihomo-config = "sudo micro /etc/mihomo/config.yaml";
       mihomo-update = "sudo mihomo update";
+      killplasma = "pkill -9 plasmashell";
     };
 
     oh-my-zsh = {
