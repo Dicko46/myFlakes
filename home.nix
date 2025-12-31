@@ -81,6 +81,20 @@
     python313Packages.playwright
     playwright
 
+    # Modules
+    powerline-fonts
+    fira
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
+    bc
+    yazi # FIle manager Terminal
+    poppler # Pdf Rendering
+    fd
+    ripgrep
+    fzf
+    zoxide
+    resvg
+
   ];
   # ++ (with unstable; [
   #   # UNSTABLE - untuk tools development/gaming yang butuh versi terbaru
@@ -112,8 +126,9 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" ];
-      theme = "amuse";
+      #  plugins = [ "git" ];
+      theme = "passion";
+      custom = "$HOME/.oh-my-zsh-custom";
     };
   };
   programs.mpv = {
@@ -141,6 +156,36 @@
       email = "dickorahmansyah@gmail.com";
     };
   };
+
+  programs.kitty = {
+    enable = true;
+    font = {
+      name = "JetBrainsMono Nerd Font"; # ← HARUS ADA name
+      size = 12;
+    };
+    themeFile = "Catppuccin-Frappe";
+    settings = {
+      scrollback_lines = 10000;
+      window_border_width = 0.5;
+      shell = "${pkgs.zsh}/bin/zsh";
+    };
+    extraConfig = ''
+      remember_window_size no
+      initial_window_width 1200
+      initial_window_height 720
+      map ctrl+shift+c copy_to_clipboard
+      map ctrl+shift+v paste_from_clipboard
+      map ctrl+shift+k clear_terminal reset active
+      placement_strategy center
+      window_margin_width 7 15 7 15
+      background_blur 40
+      background_opacity 0.4
+      hide_window_decorations no
+      scrollback_lines 0
+    '';
+
+  };
+
   # Fix permission issues
   home.activation.ensureGitConfig = ''
     if [ ! -d "$HOME/.config/git" ]; then

@@ -160,14 +160,21 @@
   programs.nix-ld.enable = true;
 
   environment.systemPackages = with pkgs; [
+
+    # Graphics
+    libva-utils
+    vulkan-loader
+    vulkan-tools # vulkaninfo
+
+    # Tools
     micro
     yt-dlp
+    kdePackages.partitionmanager
     ffmpeg-full
-    mihomo
-    libva-utils
-    vulkan-tools # vulkaninfo
-    vulkan-loader
+
+    # Modules
     zsh
+    mihomo
     pciutils
     usbutils
     iw
@@ -177,11 +184,21 @@
     smartmontools
     ntfs3g
     exfatprogs
-    kdePackages.partitionmanager
     unrar
     unzip
     steam-run
     desktop-file-utils
+    wget
+
+    (python3.withPackages (
+      python-pkgs: with python-pkgs; [
+        pandas
+        requests
+        pip
+        pygobject3
+        screeninfo
+      ]
+    ))
 
     # NUR Packages
 
